@@ -84,7 +84,8 @@ def PremierLeagueDataScraper(URL, CSV):
 
             # Scroll down
             browser.execute_script("window.scrollBy(0, 45)")
-
+            
+            # Maximal size of table on one page is 20
             if count == 20:
 
                 browser.find_element_by_xpath(
@@ -93,6 +94,7 @@ def PremierLeagueDataScraper(URL, CSV):
 
                 browser.execute_script("window.scrollBy(0, -1100)")
 
+                # Necessary sleep otherwise selenium will not find element because table need time to load
                 time.sleep(2)
 
 
