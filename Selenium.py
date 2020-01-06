@@ -24,7 +24,7 @@ count=1
 
 for i in range(10):
 
-    #Try and except (just in case XPath values changeing by counter isn't one by one)
+    #Try and except (just in case XPath values changing by counter isn't one by one)
     
     try:
         text = browser.find_element_by_xpath("/html/body/div/div[2]/div[1]/div["
