@@ -24,9 +24,6 @@ data.fillna(0, inplace=True)
 # In some columns are values like 1,000 instead of 1000
 data.replace(',', '', regex=True, inplace=True)
 
-# Aerials won + aerials lost = aerial fights attempts
-data["aerial_attempts"] = data['aerial_lost'] + data['aerial_won']
-
 # Making player column as an index column
 data.index = data['player']
 data.pop('player')
