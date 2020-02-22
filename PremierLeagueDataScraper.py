@@ -1,14 +1,14 @@
+# These 2 imports are necessary to use selenium
+from selenium.webdriver import Firefox
+from selenium.webdriver.firefox.options import Options
+
+# Package "time" is using to sleep scraper
+import time
+
+# to be able to save scraped data to csv file
+import csv
+
 def PremierLeagueDataScraper(URL, CSV):
-
-    # These 2 imports are necessary to use selenium
-    from selenium.webdriver import Firefox
-    from selenium.webdriver.firefox.options import Options
-
-    # Package "time" is using to sleep scraper
-    import time
-
-    # to be able to save scraped data to csv file
-    import csv
 
     # To be able to launch and operate on firefox
     opts = Options()
