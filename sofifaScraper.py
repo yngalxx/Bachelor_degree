@@ -33,4 +33,4 @@ for row in names.index:
     search_player_field.clear()
     time.sleep(1)
 
-names.to_csv('/Users/alexdrozdz/PycharmProjects/doLicka/wiek_zawodnikow.csv')
+names.to_csv('path')
