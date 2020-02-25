@@ -34,7 +34,7 @@ age.sort_values(by='Player', inplace=True)
 # Some values are missing
 print(age[age['Age'].str.contains("brak")])
 
-# so we need fill it by with our own hand
+# so we need fill it with our own hands
 age['Age'][24] = age['Age'][24].replace('brak', '31')
 age['Age'][52] = age['Age'][52].replace('brak', '30')
 age['Age'][62] = age['Age'][62].replace('brak', '27')
