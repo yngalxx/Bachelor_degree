@@ -11,4 +11,4 @@ Main part of my BA thesis is PremierLeagueDataScraper which scrapes data from pr
 Merging lots of csv files containing scraped data to one, cleaning scraped data etc.
 
 ## Addition (files: sofifaScraper.py & sofifaCleaner.py):
-I also wanted to have age of players, so I had to build another scraper (from sofifa.com) and another data cleaner to get it. I took a list of players names from my first scraped data and I used search field to find all of them on Sofifa page. 
+I also wanted to have age of players, so I had to build another scraper (from sofifa.com) and another data cleaner to get and clean it. I took a list of players names (in another csv) from my first scraped data and I used search field to find all of them on Sofifa page and scraped their age. 
