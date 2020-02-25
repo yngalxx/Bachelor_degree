@@ -38,5 +38,5 @@ for column in data:
 
 
 # Export data frame to csv file
-export_csv = data.to_csv('Premier_League_Forwards_Data_In_Current_Season_So_Far.csv'
+export_csv = data.to_csv('path'
                          , index=True, header=True)
