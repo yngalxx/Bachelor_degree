@@ -10,7 +10,7 @@ browser.get('https://sofifa.com')
 
 search_player_field = browser.find_element_by_name("keyword")
 
-names = pd.read_csv('/Users/alexdrozdz/PycharmProjects/doLicka/nazwiska_zawodnikow.csv')
+names = pd.read_csv('path to csv with only players names')
 names['Age'] = ""
 
 
