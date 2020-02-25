@@ -25,7 +25,7 @@ data.pop('mins_played')
 
 data.fillna(0, inplace=True)
 
-age = pd.read_csv('path to csv with only players names')
+age = pd.read_csv('path to csv with only players names and ages (output from sofifaScraper.py)')
 
 age.drop(age.columns[age.columns.str.contains('unnamed',case = False)],axis = 1, inplace = True)
 
