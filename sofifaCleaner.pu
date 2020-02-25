@@ -1,0 +1,45 @@
+import pandas as pd
+
+pd.set_option('display.max_columns', None)
+
+data = pd.read_csv(
+    '/Users/alexdrozdz/Desktop/Studia/00. Seminarium dyplomowe/Chapter3/Newest data/Premier_League_Forwards_Data_In_Season_19_20_So_Far-kopia.csv'
+)
+
+data['ontarget_scoring_rate'] = data['ontarget_scoring_att'] / data['total_scoring_att']
+data['aerial_won_rate'] = data['aerial_won'] / (data['aerial_lost'] + data['aerial_won'])
+data['goals_to_shots_rate'] = data['goals'] / data['total_scoring_att']
+data['goals_per_minute'] = data['goals'] / data['mins_played']
+data['assists_per_minute'] = data['goal_assist'] / data['mins_played']
+
+data.pop('appearances')
+data.pop('ontarget_scoring_att')
+data.pop('total_scoring_att')
+data.pop('aerial_lost')
+data.pop('hit_woodwork')
+data.pop('corner_taken')
+data.pop('aerial_won')
+data.pop('goal_assist')
+data.pop('goals')
+data.pop('mins_played')
+
+data.fillna(0, inplace=True)
+
+age = pd.read_csv('/Users/alexdrozdz/PycharmProjects/doLicka/wiek_zawodnikow.csv')
+
+age.drop(age.columns[age.columns.str.contains('unnamed',case = False)],axis = 1, inplace = True)
+
+age.sort_values(by='Player', inplace=True)
+
+# Some values are missing
+print(age[age['Age'].str.contains("brak")])
+
+# so we need fill it by with our own hand
+age['Age'][24] = age['Age'][24].replace('brak', '31')
+age['Age'][52] = age['Age'][52].replace('brak', '30')
+age['Age'][62] = age['Age'][62].replace('brak', '27')
+age['Age'][88] = age['Age'][88].replace('brak', '27')
+
+data['age'] = age['Age']
+
+data.to_csv('/Users/alexdrozdz/Desktop/Studia/00. Seminarium dyplomowe/Chapter3/Newest data/daneDoAnalizy.csv')
