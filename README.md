@@ -1,4 +1,4 @@
-# Bachelor_Thesis
+# Bachelor_degree
 Codes of scrapers from my Bachelor thesis
 
 ## Files:
