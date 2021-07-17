@@ -1,5 +1,5 @@
-# BA_Thesis
-Codes of scrapers from my BA thesis
+# Bachelor_Thesis
+Codes of scrapers from my Bachelor thesis
 
 ## Files:
 First_Steps_In_BS4.py, Selenium.py and Scrapy.py are only to present basics of those methods. 
